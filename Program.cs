@@ -6,6 +6,7 @@
 */
 
 using System;
+using System.Runtime.CompilerServices;
 
 namespace TechProj2b
 {
@@ -16,45 +17,54 @@ namespace TechProj2b
             // Ask the user for input
             Console.WriteLine("Enter the grade you expect to get in ISM 4300 (on a 100 point scale) ...");
 
-            // This variable will gather the user input
-            string input = Console.ReadLine();
-            // This will be used to conver user input into variable
-            decimal grade = decimal.Parse(input);
-
-            if (grade >= 90 && grade <= 100)
+            try
             {
-                Console.WriteLine("You're letter grade will be an A");
+                /*
+                    This variable will store the user input after parsing into decimal
+                */
+                string input = Console.ReadLine();
+                // This will be used to conver user input into variable
+                decimal grade = decimal.Parse(input);
 
-            }
+                if (grade >= 90 && grade <= 100)
+                {
+                    Console.WriteLine("You're letter grade will be an A");
+                }
 
-            else if (grade >= 80 && grade < 90)
-            {
-                Console.WriteLine("You're letter grade will be a B");
-                
-            }
+                else if (grade >= 80 && grade < 90)
+                {
+                    Console.WriteLine("You're letter grade will be a B");
 
-            else if (grade >= 70 && grade < 80)
-            {
-                Console.WriteLine("You're letter grade will be a C");
+                }
 
-            }
+                else if (grade >= 70 && grade < 80)
+                {
+                    Console.WriteLine("You're letter grade will be a C");
 
-            else if (grade >= 60 && grade < 70)
-            {
-                Console.WriteLine("You're letter grade will be D");
+                }
 
-            }
+                else if (grade >= 60 && grade < 70)
+                {
+                    Console.WriteLine("You're letter grade will be D");
 
-            else if (grade >= 0 && grade < 60)
-            {
-                Console.WriteLine("You're letter grade will an F");
-            }
+                }
 
-            else
+                else if (grade >= 0 && grade < 60)
+                {
+                    Console.WriteLine("You're letter grade will an F");
+                }
+
+                else
+                {
+                    Console.WriteLine("Press any key to exit the program and try again by entering a number between 0 and 100");
+                    Console.ReadKey(true);
+                }
+            } // End of Try
+            catch
             {
                 Console.WriteLine("Press any key to exit the program and try again by entering a number between 0 and 100");
                 Console.ReadKey(true);
-            }
-        }
-    }
-}
+            } // End of Catch
+        } // End of Main
+    } // End of Class
+} // End of Namespace
