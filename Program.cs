@@ -30,7 +30,7 @@ namespace TechProj2b
             else if (grade >= 80 && grade < 90)
             {
                 Console.WriteLine("You're letter grade will be a B");
-
+                
             }
 
             else if (grade >= 70 && grade < 80)
@@ -53,7 +53,7 @@ namespace TechProj2b
             else
             {
                 Console.WriteLine("Press any key to exit the program and try again by entering a number between 0 and 100");
-                Console.ReadKey(true);
+                
             }
         }
     }
