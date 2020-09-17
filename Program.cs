@@ -53,7 +53,7 @@ namespace TechProj2b
             else
             {
                 Console.WriteLine("Press any key to exit the program and try again by entering a number between 0 and 100");
-                
+                Console.ReadKey(true);
             }
         }
     }
