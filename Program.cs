@@ -16,7 +16,10 @@ namespace TechProj2b
         {
             // Ask the user for input
             Console.WriteLine("Enter the grade you expect to get in ISM 4300 (on a 100 point scale) ...");
-
+            /*
+               Try catch block will validate user input, if user does not provide integer or decimal
+               the catch block will handle & display error in message. 
+            */
             try
             {
                 /*
@@ -25,7 +28,11 @@ namespace TechProj2b
                 string input = Console.ReadLine();
                 // This will be used to conver user input into variable
                 decimal grade = decimal.Parse(input);
-
+                /* 
+                   This IF/ELSE IF/ELSE statement will conditionally test the users input.
+                   Various options for the letter grades are available depending on the number 
+                   grade entered by the user.
+                */
                 if (grade >= 90 && grade <= 100)
                 {
                     Console.WriteLine("You're letter grade will be an A");
